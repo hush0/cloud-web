@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: cloud-web
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://10.130.115.232:3306/big_data?useUnicode=true&characterEncoding=utf8
+    username: develop
+    password: weqCDF@179
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@eureka1.oa.dev.test.qiyi.qae/eureka/,http://root:root@eureka2.oa.dev.test.qiyi.qae/eureka/
+    register-with-eureka: true
+  instance:
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 3
+
+
+server:
+  port: 8080
