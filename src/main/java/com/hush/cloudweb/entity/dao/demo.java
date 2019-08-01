@@ -6,4 +6,8 @@ package com.hush.cloudweb.entity.dao;
  * @Version 1.0
  */
 public class demo {
+
+    public static void main(String[] args) {
+        System.out.println("test");
+    }
 }
