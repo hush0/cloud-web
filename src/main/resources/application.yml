@@ -12,5 +12,14 @@ spring:
     min-idle: 5
     initial-size: 5
 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root123@localhost:9000/eureka
+instance:
+  prefer-ip-address: true
+
+
 server:
   port: 8080
