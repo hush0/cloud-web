@@ -12,7 +12,7 @@ import java.util.Collection;
  * @Date: 2019-08-02
  * @Version 1.0
  */
-//@Component
+@Component
 public class BeanUtil implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext;

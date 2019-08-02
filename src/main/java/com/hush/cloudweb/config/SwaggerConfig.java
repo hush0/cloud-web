@@ -28,15 +28,16 @@ public class SwaggerConfig {
     public Docket swaggerSpringMvcPlugin() {
 
         //prod环境禁用SwaggerUI
-        /*Predicate<String> path = PathSelectors.any()::apply;
+        Predicate<String> path = PathSelectors.any()::apply;
         if (ApplicationProfile.isProductProfile()) {
-            System.out.println("******This is product enviroment");
             path = PathSelectors.none()::apply;
-        }*/
+        }
+
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(buildApiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                .paths(path::test)
                 .build();
     }
 
