@@ -32,7 +32,6 @@ public class SwaggerConfig {
         if (ApplicationProfile.isProductProfile()) {
             path = PathSelectors.none()::apply;
         }
-
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(buildApiInfo())
                 .select()

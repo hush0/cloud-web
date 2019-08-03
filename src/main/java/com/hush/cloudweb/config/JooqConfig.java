@@ -22,13 +22,13 @@ import javax.sql.DataSource;
  * @Version 1.0
  */
 
-/*@Configuration
+@Configuration
 @EnableJdbcRepositories
-@Import(JdbcConfiguration.class)*/
+@Import(JdbcConfiguration.class)
 public class JooqConfig {
 
 
-    /*@Autowired
+    @Autowired
     private DataSource dataSource;
 
     @Bean
@@ -49,5 +49,5 @@ public class JooqConfig {
                 .withRenderSchema(false)
                 .withRenderNameStyle(RenderNameStyle.LOWER));
         return jooqConfiguration;
-    }*/
+    }
 }
